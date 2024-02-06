@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8rem;
+  padding: 30px;
+  background-color: hsl(210, 46%, 95%);
+}
+article {
+  padding: 0px 40px 30px 30px;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+article.daniel {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-origin: content-box, padding-box;
+}
+article.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+article.jeanette {
+  background-color: hsl(0, 0%, 100%);
+}
+article.patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+article.kira {
+  background-color: hsl(0, 0%, 100%);
+}
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  outline: 3px solid hsla(210, 46%, 95%, 0.459);
+}
+article h1 {
+  color: hsl(210, 46%, 95%);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0px 20px;
+}
+h1 span {
+  display: block;
+  opacity: 50%;
+}
+article div {
+  display: flex;
+  align-items: center;
+  padding: 30px 0px 0px;
+}
+article .para {
+  color: hsl(210, 46%, 95%);
+  font-size: 1.2rem;
+  margin: 20px 0px;
+}
+article .quote {
+  color: hsl(210, 46%, 95%);
+  opacity: 70%;
+  font-weight: 500;
+}
+.white h1 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+}
+.white p {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+}
+.white .quote {
+  font-weight: 500;
+}
+/* desktop screen size */
+@media only screen and (min-width: 950px) {
+  body {
+    padding: 100px;
+    min-height: 100vh;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    column-gap:35px;
+    row-gap: 5px;
+  }
+  article.daniel{
+    grid-area: daniel;
+  }
+  article.jonathan{
+    grid-area: jonathan;
+  }
+  article.kira{
+    grid-area: kira;
+  }
+  article.jeanette{
+    grid-area: jeanette;
+  }
+  article.patrick{
+    grid-area: patrick;
+  }
+}
